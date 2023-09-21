@@ -1,0 +1,115 @@
+package.json
+express install
+git ignore file create
+
+
+1-> npm init
+2-> npm i express
+3- git ignore file create
+4- landing page creation -index.js
+
+
+nodemon - node have no automatic compilation so updated version nodemon is used.
+
+command---> npm i -g nodemon     - nodemon index.js  --->global
+            npm i nodemon        - npx nodemon index.js ---->local
+
+
+api calls - get, post, put, patch, delete
+
+bank-
+
+create account    - post
+login             - post
+balance check     - get
+money transfer    - post
+account statement - get
+profile view      - get
+delete account    - delete
+
+
+response - status code
+100 - information
+200 - success
+300 - redirection
+400 - client error
+500 - server error
+
+mvc(model view controls)
+-------------------------
+
+(pic phone)
+
+database - mongodb - collections - users
+models - structure of collections
+controllers - logic of project
+routes - serveriloot varana oro api callintem path 
+view - templates evdeyano kanane
+
+
+database - MONGO-DB
+--------------------------
+
+- store datas as collections
+- unstructured database - stores every database
+
+- mongosh
+
+- server commands
+------------------
+
+- find data in database collection
+  
+   --> databaseName.collectionName.findOne({key:value}) - object - null
+   --> databaseName.collectionName.find({key:value})    - array of objects - null
+
+- delete
+
+  --> databaseName.collectionName.deleteOne({key:value}) - deleteCount 1/0
+
+- update
+
+same as findOne
+
+- create
+
+  - class - collection
+            - users         new users(acno:1000, uname:"ghh"......)
+
+  --> new collectionName({objectKeys:values})
+
+
+- save
+
+  .save()
+
+
+server database integration using connection string
+------------------------------------------------------
+
+library - mongoose  - npm i mongoose
+
+environmental variables
+------------------------
+
+-variables that contain application configurations needs in run time
+-module - process - module that provide .env service
+- it can convert static working of app into dynamic (local host running to server running)
+
+- dotenv - library used to import and configure .env file
+         --> npm i dotenv
+
+
+front-end backend integration
+------------------------------
+
+library - cors - cross orgin resources sharing
+
+
+// money transfer logic
+-----------------------
+
+front-end - recipient acno, psw,acno
+
+transaction details-transaction acno,amount,method-credit/debit,date and time
+
