@@ -35,7 +35,7 @@ require('./database/connection')
 
 // port
 
-const port=5000 || process.env.port
+const port=5001 || process.env.port
 
 server.listen(port, ()=>{
   console.log(`______server started at port number ${port}______`);

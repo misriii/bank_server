@@ -33,6 +33,8 @@ router.get('/bankuser/account-statement/:acno', accountStatement)
 
 // delete account
 
+router.delete('/bankuser/delete-account/:acno', accountDelete)
+
 // export router
 
 module.exports = router

@@ -202,6 +202,22 @@ accountStatement=(req,res)=>{
   })
 }
 
+accountDelete=(req, res)=>{
+  const {acno}=req.params
+  users.deleteOne({acno}).then(data=>{
+    if(data){
+      res.status(200).json({
+        message: "Account deleted successfully",
+        status: true,
+        statusCode: 200
+
+      })
+    }
+    
+    
+  })
+}
 
 
-module.exports = { register, login, getBalance, moneyTransfer, accountStatement}
+
+module.exports = { register, login, getBalance, moneyTransfer, accountStatement,accountDelete}
