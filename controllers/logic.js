@@ -1,5 +1,5 @@
 const users = require("../models/collections")
-
+const jwt=require('jsonwebtoken')
 
 // register account creation
 
@@ -24,10 +24,13 @@ register = (req, res) => {
 
   users.findOne({ acno }).then(user => {
     if (user) {
+      
+
       res.status(400).json({
         message: "user already exist",
         status: false,
-        statusCode: 400
+        statusCode: 400,
+       
       })
     }
     else {
@@ -60,13 +63,17 @@ login = (req, res) => {
 
   const { acno, psw } = req.body
 
+  // token generation
+const token=jwt.sign({acno},"secretkey123")
+
   users.findOne({ acno, psw }).then(user => {
     if (user) {
       res.status(200).json({
         message: "login success",
         status: true,
         statusCode: 200,
-        currentUser: user.uname
+        currentUser:user.uname,
+        token
 
       })
     }

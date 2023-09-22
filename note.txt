@@ -113,3 +113,17 @@ front-end - recipient acno, psw,acno
 
 transaction details-transaction acno,amount,method-credit/debit,date and time
 
+user authentication
+-------------------
+
+jwt- json web token
+
+middlewares
+-----------
+function with 3 arguments
+are used in backend to control server requests coming from client side
+
+1- application specific middlewares - control all router of server application
+
+2- router specific middlewares - only control specified router
+

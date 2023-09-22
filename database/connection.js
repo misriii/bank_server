@@ -5,7 +5,7 @@ mongoose.connect(process.env.BASE_URL,{
   useUnifiedTopology:true,
   useNewUrlParser:true
 }).then(()=>{
-  console.log("-------mongodb atlast connected-------");
+  console.log("-------mongodb atlas connected-------");
 }).catch(()=>{
   console.log("-------not connected--------");
 })
